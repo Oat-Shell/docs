@@ -45,6 +45,7 @@ const config: Config = {
                     editUrl:
                         'https://github.com/Oat-Shell/docs/tree/main/',
                 },
+                blog: false,
                 theme: {
                     customCss: './src/css/custom.css',
                 },
@@ -60,6 +61,7 @@ const config: Config = {
             logo: {
                 alt: 'Oat Logo',
                 src: 'img/open-graph.png',
+                href: '/',
             },
             items: [
                 {
@@ -72,15 +74,6 @@ const config: Config = {
         footer: {
             style: 'dark',
             links: [
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Tutorial',
-                            to: '/',
-                        },
-                    ],
-                },
                 {
                     title: 'Community',
                     items: [
