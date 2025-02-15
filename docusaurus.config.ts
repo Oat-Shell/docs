@@ -5,20 +5,22 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: 'My Site',
-    tagline: 'Dinosaurs are cool',
-    favicon: 'img/favicon.ico',
+    title: 'Oat Docs',
+    tagline: 'Docs for the Oat Shell Desktop App',
+    favicon: 'img/favicon.svg',
 
     // Set the production url of your site here
-    url: 'https://docs.oatshell.com',
+    url: 'https://oat-shell.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'Oat', // Usually your GitHub org/user name.
-    projectName: 'oat', // Usually your repo name.
+    organizationName: 'oat-shell', // Usually your GitHub org/user name.
+    projectName: 'oat-shell.github.io', // Usually your repo name.
+    trailingSlash: false,
+    deploymentBranch: 'main',
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
@@ -36,11 +38,12 @@ const config: Config = {
             'classic',
             {
                 docs: {
+                    routeBasePath: '/',
                     sidebarPath: './sidebars.ts',
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/Oat-Shell/desktop_app/tree/main/docs',
+                        'https://github.com/Oat-Shell/docs/tree/main/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -51,22 +54,16 @@ const config: Config = {
 
     themeConfig: {
         // Replace with your project's social card
-        image: 'img/docusaurus-social-card.jpg',
+        image: 'img/open-graph.png',
         navbar: {
-            title: 'My Site',
+            title: 'Oat Docs',
             logo: {
-                alt: 'My Site Logo',
-                src: 'img/logo.svg',
+                alt: 'Oat Logo',
+                src: 'img/open-graph.png',
             },
             items: [
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'tutorialSidebar',
-                    position: 'left',
-                    label: 'Docs',
-                },
-                {
-                    href: 'https://github.com/Oat-Shell/desktop-issues',
+                    href: 'https://github.com/Oat-Shell/docs',
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -93,7 +90,6 @@ const config: Config = {
                         },
                     ],
                 },
-                ,
             ],
             copyright: `Copyright © ${new Date().getFullYear()} Oat, Inc. Built with Docusaurus.`,
         },
